@@ -7,7 +7,11 @@ app = FastAPI(title="Morocco Spatial Dashboard")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://oussamasounti.github.io",
+        "http://localhost:5500",   # for local dev
+        "http://127.0.0.1:5500",
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
